@@ -1,7 +1,7 @@
 let currentNumber = 0;
 let racamanSeries = [0];
-
 function setup() {
+//  frameRate(10);
   createCanvas(1200, 600);
 	background(99);
 }
@@ -23,23 +23,31 @@ function draw() {
 	line(0, height/2, width, height/2);
 
   angleMode(DEGREES);
-  let angle = 0;
-  let angleMovement = 0;
   let circleStartPoint = racamanSeries[racamanSeries.length - 2];
   let diameter = 0;
+  let radius = 0;
+  let startX = 0;
+  let startY = 0;
   if (racamanSeries[racamanSeries.length - 1] > racamanSeries[racamanSeries.length - 2]) {
     diameter = racamanSeries[racamanSeries.length - 1] - racamanSeries[racamanSeries.length - 2];
-    angle = 180;
-    angleMovement = 1;
+    radius = diameter/2;
+    startX = circleStartPoint + radius;
+    startY = height/2;
   } else {
     diameter = racamanSeries[racamanSeries.length - 2] - racamanSeries[racamanSeries.length - 1];
-    angle = -180;
-    angleMovement = -1;
+    radius = diameter/2;
+    startX = circleStartPoint - radius;
+    startY = height /2;
   }
-/*
-  for (i = 0; i = angle; i += angleMovement) {
-    let x = circleStartPoint;
-    let y = height/2;
+
+  strokeWeight(1);
+  let currentAngle = 180;
+  let x = circleStartPoint;
+  let y = height/2;
+  for (let i = 0; i < 180; i+= 0.2) {
+    point(x,y);
+    currentAngle++;
+    x = startX + radius * sin(currentAngle);
+    y = startY + radius * cos(currentAngle);
   }
-  */
 }
