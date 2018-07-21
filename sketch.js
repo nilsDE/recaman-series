@@ -2,7 +2,7 @@ let currentNumber = 0;
 let racamanSeries = [0];
 function setup() {
 //  frameRate(10);
-  createCanvas(1200, 600);
+  createCanvas(windowWidth, windowHeight);
 	background(99);
 }
 
@@ -18,11 +18,10 @@ function draw() {
 	}
 	currentNumber++;
 
-	stroke(255);
-	strokeWeight(3);
+	stroke(200);
+	strokeWeight(1);
 	line(0, height/2, width, height/2);
 
-  angleMode(DEGREES);
   let circleStartPoint = racamanSeries[racamanSeries.length - 2];
   let diameter = 0;
   let radius = 0;
@@ -40,14 +39,12 @@ function draw() {
     startY = height /2;
   }
 
-  strokeWeight(1);
-  let currentAngle = 180;
-  let x = circleStartPoint;
-  let y = height/2;
-  for (let i = 0; i < 180; i+= 0.2) {
-    point(x,y);
-    currentAngle++;
-    x = startX + radius * sin(currentAngle);
-    y = startY + radius * cos(currentAngle);
+  noFill();
+  strokeWeight(0.5);
+  stroke(random(70, 220), 200);
+  if (currentNumber % 2 == 0) {
+    arc(startX, startY, diameter, diameter, 0, PI);
+  } else {
+    arc(startX, startY, diameter, diameter, PI, 0);
   }
 }
