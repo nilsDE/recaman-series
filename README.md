@@ -1,2 +1,2 @@
-# racaman-series
-Dispplay the Racaman sequence
+# recaman-series
+Display the Racaman sequence
