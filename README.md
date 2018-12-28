@@ -17,3 +17,4 @@ And so on and so forth.
 
 ## How to use this repository
 [You can check out my visualization here!](https://nilsde.github.io/recaman-series/) 
+(Ideally open in Chrome!)
