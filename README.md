@@ -15,6 +15,8 @@ Starting from 0, the first question is as follows: Can I subtract 1? I cannot, a
 Can I now subtract 4? Yes indeed, because the resulting number 2 is not negative and not yet in the sequence. 
 And so on and so forth. 
 
+Further infos can be found here: [The Online Encyclopedia of Integer Sequences](https://oeis.org/A005132)
+
 ## How to use this repository
 [You can check out my visualization here!](https://nilsde.github.io/recaman-series/) 
 (Ideally open in Chrome!)
