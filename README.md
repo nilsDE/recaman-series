@@ -19,4 +19,4 @@ Further infos can be found here: [The Online Encyclopedia of Integer Sequences](
 
 ## How to use this repository
 [You can check out my visualization here!](https://nilsde.github.io/recaman-series/) 
-(Ideally open in Chrome!)
+(Ideally open in Chrome!!)
